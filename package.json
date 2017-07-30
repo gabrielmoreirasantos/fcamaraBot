@@ -1,20 +1,24 @@
 {
-	"name": "NodejsStarterApp",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "4.15.x",
-		"cfenv": "1.0.x",
-		"body-parser": "1.15.0",
-		"request": "2.72.0",
-		"htmlparser": "1.7.7",
-		"watson-developer-cloud": "2.0.1"
-	},
-	"repository": {},
-	"engines": {
-		"node": "6.x"
-	} 
+  "name": "nodejs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "4.15.x",
+    "cfenv": "1.0.x",
+    "body-parser": "1.15.0",
+    "request": "2.72.0",
+    "htmlparser": "1.7.7",
+    "watson-developer-cloud": "2.0.1"
+  },
+  "repository": {},
+  "engines": {
+    "node": "6.x"
+  },
+  "description": " ",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
 }
