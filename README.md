@@ -24,6 +24,8 @@ respondendo suas dúvidas sobre os problemas apresentados em tecnologias utiliza
 
 1.2 npm start
 
+1.3 npm install
+
 Para instalar os modulos necessários do node.js
 
 Port: 3000 
