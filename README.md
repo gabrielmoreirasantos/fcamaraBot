@@ -19,8 +19,11 @@ respondendo suas dúvidas sobre os problemas apresentados em tecnologias utiliza
 ## Testar na máquina local:
 
 1. Entre na pasta do projeto pelo terminal e digite:
+
 1.1 npm init
+
 1.2 npm start
+
 Para instalar os modulos necessários do node.js
 
 Port: 3000
