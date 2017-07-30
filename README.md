@@ -16,6 +16,15 @@ respondendo suas dúvidas sobre os problemas apresentados em tecnologias utiliza
 1. Entre em nossa página do facebook: https://www.facebook.com/helpdeskfcamara/
 2. Inicie uma conversa com o chat da página.
 
+## Testar na máquina local:
+
+1. Entre na pasta do projeto pelo terminal e digite:
+1.1 npm init
+1.2 npm start
+Para instalar os modulos necessários do node.js
+
+Port: 3000
+
 ## Tipos de perguntas:
 
 1. Saudações: Oi, Bom dia, Olá, Saudações, Olá, tudo bem?
@@ -27,4 +36,4 @@ respondendo suas dúvidas sobre os problemas apresentados em tecnologias utiliza
 	
 	4.2. Negação: Não, Negativo, Eu não.
 	
-5. Despedidas: Até logo, Até, Tchau, Xau, Abraços, atenciosamente.
+5. Despedidas: Até logo, Até, Tchau, Xau, Abraços, atenciosamente, Obrigado.
