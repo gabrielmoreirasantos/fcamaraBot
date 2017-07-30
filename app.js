@@ -32,6 +32,8 @@ app.post('/webhook/', function (req, res) {
 	var text = null;
 	
     messaging_events = req.body.entry[0].messaging;
+    
+    //Faz uma iteração para cada mensagem recebida
 	for (i = 0; i < messaging_events.length; i++) {	
         event = req.body.entry[0].messaging[i];
         sender = event.sender.id;
@@ -69,7 +71,9 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200);
 });
 
+//Recebe os dados do workspace e faz a chamada do watson
 function callWatson(payload, sender) {
+
 	w_conversation.message(payload, function (err, convResults) {
 		 console.log(convResults);
 		contexid = convResults.context;
@@ -83,7 +87,12 @@ function callWatson(payload, sender) {
         if(convResults != null && convResults.output != null){
 			var i = 0;
 			while(i < convResults.output.text.length){
+
+				//Envia as respostas do bot(convResults) para o facebook
 				sendMessage(sender, convResults.output.text[i++]);
+
+				//Envia as intents para o facebook. Apenas para fins de teste
+				//sendMessage(sender, convResults.intents[i++].intent);
 			}
 		}
             
