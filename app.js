@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 var conversation_id = "";
+
+// Configs do watson Conversation
 var w_conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',
     username: process.env.CONVERSATION_USERNAME || '1ae080d0-c6b5-413e-aeff-72fc1436388b',
@@ -18,6 +20,7 @@ var w_conversation = watson.conversation({
 });
 var workspace = process.env.WORKSPACE_ID || 'workspaceId';
 
+//Verifica Token do webhook para usar API do facebook
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'EAAEotZBVZBswUBAO6bh2L85Ea7XkrfNdJH41fr5F4V6tz6e5ZAEl449Ak0OWZCsYtmYdHXDxKohOusDa1T0QpSsIZC9Yu0So9kG9iMh42lHfL4SQ9MEc1xyzO5tVwiIBwVaokshXfhZCyvel5ZCVA4dCcdAp44WaJ8Te5it4kqdku58FauVP743') {
         res.send(req.query['hub.challenge']);
@@ -46,7 +49,8 @@ app.post('/webhook/', function (req, res) {
 			// context: {"conversation_id": conversation_id}
 			context:contexid
 		}
-
+		
+		//Id do workspace com as intents, Entities e dialogs
 		var payload = {
 			workspace_id: "41e785eb-63b4-4cb7-ab3b-1fd6f0d37547"
 		};
@@ -86,6 +90,7 @@ function callWatson(payload, sender) {
     });
 }
 
+//Envia mensagem para api do facebook
 function sendMessage(sender, text_) {
 	text_ = text_.substring(0, 319);
 	messageData = {	text: text_ };
